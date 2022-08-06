@@ -1,10 +1,9 @@
-# content-collection-scripts
+# content-prioritisation
 
 Over the years I've amassed collections of unread ebooks collections on various sites including:
 
  * My Kindle library
- * [The Pragmatic Bookshelf](https://pragprog.com)
- * [Gumroad](https://gumroad.com)
+ * [The Pragmatic Bookshelf](https://pragprog.com) * [Gumroad](https://gumroad.com)
  * [O'Reilly Member's Library](https://members.oreilly.com/)
  
  This repo contains some scripts to streamline the process of compiling a list of what's in each collection so that I can
