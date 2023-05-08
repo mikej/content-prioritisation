@@ -26,6 +26,6 @@ Over the years I've amassed collections of unread ebooks collections on various 
 
 ### Gumroad
 
-1. Go to your library on Gumroad and sort by purchase date: https://app.gumroad.com/library?sort=purchase_date
-2. Save a copy of the page e.g. `gumroad.html`
-3. run `$ ./gumroad.rb books.html` to output list of products and creators in CSV format
+ 1. Go to your library on Gumroad and sort by purchase date: https://app.gumroad.com/library?sort=purchase_date
+ 2. Save a copy of the page e.g. `gumroad.html`
+ 3. run `$ ./gumroad.rb books.html` to output list of products and creators in CSV format
