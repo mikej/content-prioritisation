@@ -29,3 +29,11 @@ Over the years I've amassed collections of unread ebooks collections on various 
  1. Go to your library on Gumroad and sort by purchase date: https://app.gumroad.com/library?sort=purchase_date
  2. Save a copy of the page e.g. `gumroad.html`
  3. run `$ ./gumroad.rb books.html` to output list of products and creators in CSV format
+
+### Audible
+
+ 1. Go to _Library_ on Audible
+ 2. Change _Show items per page_ to the maximum value in order to reduce number of pages needed
+ 3. Save a copy of the page e.g. `audible.html`
+ 4. run `$ ./audible.rb audible.html` to output list of audiobooks and authors in CSV format
+ 5. repeat steps 3 - 4 for each additional page if there is more than one page in the library
