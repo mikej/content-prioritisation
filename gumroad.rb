@@ -3,7 +3,7 @@ require "nokogiri"
 require "csv"
 
 CSV($stdout) do |csv|
-  csv << ["title", "author", "subtitle"]
+  csv << ["title", "author", "subtitle", "link"]
   ARGV.each do |filename|
     doc = Nokogiri::HTML(File.read(filename))
 
@@ -13,11 +13,12 @@ CSV($stdout) do |csv|
     json["results"].each do |r|
       name = r["product"]["name"]
       title, subtitle = name.split(/:\s+/, 2).map(&:strip)
+      link = r["purchase"]["download_url"]
       creator = r["product"]["creator"]
       creator_name = creator ? creator["name"] : ""
 
       # blank column is for manually filling in categorisation
-      csv << [title, creator_name, "", subtitle]
+      csv << [title, creator_name, "", subtitle, link]
     end
   end
 end
