@@ -15,9 +15,11 @@ ARGV.each do |filename|
     title_nodes.each do |title_node|
       title, subtitle = title_node.text.split(/:\s+/, 2).map { |s| clean(s) }
       author = clean(title_node.next_element.text)
+      asin = title_node["id"].match(/^content-title-(.+)$/).captures[0]
+      link = "https://www.amazon.co.uk/gp/product/#{asin}"
 
       # blank column is for manually filling in categorisation
-      csv << [title, author, "", subtitle]
+      csv << [title, author, "", subtitle, link]
     end
   end
 end
