@@ -10,7 +10,7 @@ CSV($stdout) do |csv|
     library_string = doc.at_css("script[data-component-name=\"LibraryPage\"]").content
 
     json = JSON.parse(library_string)
-    json["results"].each do |r|
+    json["results"].reverse.each do |r|
       name = r["product"]["name"]
       title, subtitle = name.split(/:\s+/, 2).map(&:strip)
       link = r["purchase"]["download_url"]
