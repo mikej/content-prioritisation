@@ -6,12 +6,14 @@ def clean(s)
   s.strip.gsub(/\s+/, " ")
 end
 
-ARGV.each do |filename|
-  doc = Nokogiri::HTML(File.read(filename))
+CSV($stdout) do |csv|
+  csv << %w[title author category subtitle link acquired_on]
 
-  title_nodes = doc.css(".digital_entity_title")
+  ARGV.each do |filename|
+    doc = Nokogiri::HTML(File.read(filename))
 
-  CSV($stdout) do |csv|
+    title_nodes = doc.css(".digital_entity_title")
+
     title_nodes.each do |title_node|
       title, subtitle = title_node.text.split(/:\s+/, 2).map { |s| clean(s) }
 
