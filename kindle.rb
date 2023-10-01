@@ -15,6 +15,9 @@ ARGV.each do |filename|
     title_nodes.each do |title_node|
       title, subtitle = title_node.text.split(/:\s+/, 2).map { |s| clean(s) }
       author = clean(title_node.next_element.text)
+
+      # title_node will have an id like "content-title-ABCD2134" so we can extract the ASIN from this and use it
+      # to build a product page URL
       asin = title_node["id"].match(/^content-title-(.+)$/).captures[0]
       link = "https://www.amazon.co.uk/gp/product/#{asin}"
 
