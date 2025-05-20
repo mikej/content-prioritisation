@@ -20,9 +20,11 @@ Over the years I've amassed collections of unread ebooks collections on various 
 
  1. Go to _Manage Your Content And Devices_
  2. Click on _Books_
- 3. Use Developer Tools to copy the table of books e.g. `<table class="ListLayout-module_table__1QeQ4">`, paste into a file and save e.g. `books.html`
- 4. run `$ ./kindle.rb books.html` to output list of books and authors in CSV format
- 5. repeat steps 3 - 4 for each additional page in the list of books
+ 3. Update filters to view Books Purchases, Sort by: Acquired: Oldest to Newest
+ 4. Navigate to the page that contentains the first book to be included in the CSV 
+ 5. Use Developer Tools to copy the table of books e.g. `<table class="ListLayout-module_table__1QeQ4">`, paste into a file and save e.g. `books.html`
+ 6. run `$ ./kindle.rb books.html` to output list of books and authors in CSV format
+ 7. repeat steps 3 - 4 for each additional page in the list of books
 
 ### Gumroad
 
